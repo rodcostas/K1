@@ -182,7 +182,7 @@
   .applic .a.wide{align-items:flex-start}
   .applic .a .tk{margin-top:1px}
   /* operator tools cards */
-  .optools{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
+  .optools{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px}
   .optool{background:var(--paper-alt);border:1px solid var(--line);border-radius:16px;padding:28px}
   .optool .ic{width:42px;height:42px;border-radius:11px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
   .optool .ic svg{width:20px;height:20px;stroke:var(--accent)}
@@ -225,7 +225,7 @@
 <!-- NAV -->
 <nav>
   <div class="wrap nav-inner">
-    <div class="logo"><span class="k">K</span>1<small>Sovereign&nbsp;Access&nbsp;Node</small></div>
+    <div class="logo"><span class="k">K</span>1<small>sovereign&nbsp;access&nbsp;node</small></div>
     <div class="nav-right">
       <div class="nav-links">
         <a href="#overview">Overview</a>
@@ -269,7 +269,7 @@
         </div>
       </div>
       <div class="hero-stat hs-1"><div class="num">28</div><div class="lbl">Countries</div></div>
-      <div class="hero-stat hs-2"><div class="num">Self</div><div class="lbl">Custodial</div></div>
+      <div class="hero-stat hs-2"><div class="num">100%</div><div class="lbl">Self-custodial</div></div>
     </div>
   </div>
 </header>
@@ -325,6 +325,11 @@
     </div>
 
     <div class="optools reveal">
+      <div class="optool">
+        <div class="ic"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3h18v4H3zM3 10h18v4H3zM3 17h18v4H3zM7 5h.01M7 12h.01M7 19h.01"/></svg></div>
+        <h4>Edge administration</h4>
+        <p>Manage, configure, and update your entire fleet's operational parameters instantly from your own administrative interface, with zero reliance on centralized manufacturer intervention.</p>
+      </div>
       <div class="optool">
         <div class="ic"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
         <h4>Fee autonomy</h4>
