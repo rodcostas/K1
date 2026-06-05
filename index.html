@@ -179,6 +179,8 @@
     .nav-right{gap:14px}
   }
   /* ---- K1 additions to shared system ---- */
+  .sub-label{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:24px;display:flex;align-items:center;gap:12px}
+  .sub-label:after{content:"";flex:1;height:1px;background:var(--line)}
   .applic .a.wide{align-items:flex-start}
   .applic .a .tk{margin-top:1px}
   /* operator tools cards */
@@ -204,6 +206,8 @@
   .region h4{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:14px;font-family:'Spline Sans';font-weight:700}
   .region .ct{font-size:14px;color:var(--slate);line-height:1.85}
   .map-note{text-align:center;font-size:13px;color:var(--slate-light);margin-top:28px}
+  .map-wrap{margin:0 auto 40px;max-width:1000px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 24px 50px -30px rgba(19,24,58,.25)}
+  .map-wrap img{width:100%;height:auto;display:block;border-radius:8px}
   /* video feature */
   .videofeat{padding:0 0 96px}
   .vf-card{background:var(--navy-deep);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:1.1fr .9fr;align-items:center}
@@ -231,8 +235,8 @@
         <a href="#overview">Overview</a>
         <a href="#architecture">Architecture</a>
         <a href="#specs">Specifications</a>
-        <a href="#network">Global Network</a>
-        <a href="#contact" class="nav-cta">Create your SAN</a>
+        <a href="#network">Global Presence</a>
+        <a href="#contact" class="nav-cta">Deploy K1</a>
       </div>
     </div>
   </div>
@@ -242,13 +246,10 @@
 <header class="hero">
   <div class="wrap hero-grid">
     <div class="reveal in">
-      <span class="eyebrow"><span class="dot"></span>Self-Custodial · Cash-to-Bitcoin</span>
-      <h1>Deploy a <span class="grad-text">Sovereign Access Node</span> or network.</h1>
-      <p class="lead">A self-custodial node designed to convert local physical cash into instant Bitcoin liquidity. Run independently of third-party account rails, remove counterparty risk, and retain full control over your margins.</p>
-      <div class="hero-ctas">
-        <a href="#contact" class="btn btn-primary">Create your Sovereign Access Node <span class="arrow">&rarr;</span></a>
-      </div>
-      <p class="built-for">For Bitcoin circular economies, independent operators, enterprise wallet providers, and BTM networks looking to deploy sovereign cash-to-bitcoin infrastructure.</p>
+      <span class="eyebrow"><span class="dot"></span>Global footprint · Operating in 28 countries · Made in El Salvador</span>
+      <h1>Instant Bitcoin for users.<br><span class="grad-text">Sovereign control for operators.</span></h1>
+      <p class="lead">K1 is a compact cash-to-Bitcoin terminal that lets operators convert local cash directly into Bitcoin while retaining sovereign control over infrastructure, liquidity, margins, and operations.</p>
+      <p class="built-for">Built for Bitcoin Circular Economies, independent operators, enterprise wallet providers, and BTM networks seeking sovereign cash-to-Bitcoin infrastructure.</p>
     </div>
     <div class="hero-visual reveal in">
       <div class="device-card">
@@ -280,8 +281,8 @@
     <div class="grid">
       <div class="reveal">
         <span class="sec-tag">Overview</span>
-        <h2>Zero intermediaries. Platform independence.</h2>
-        <p>Secure direct cash-to-bitcoin routing to your own independent infrastructure. The SAN software stack bridges the currency your community uses every day directly to your keys:</p>
+        <h2>Platform independence.</h2>
+        <p>Bring Bitcoin access closer to your users. The K1 software stack bridges the currency people use every day directly to your own keys and infrastructure.</p>
         <div class="applic">
           <div class="a wide"><span class="tk"><svg fill="none" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>Process instant Lightning fractions for fast micro-transactions</div>
           <div class="a wide"><span class="tk"><svg fill="none" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>Settle natively On-Chain for larger cash allocations</div>
@@ -299,12 +300,13 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="sec-tag">Architecture</span>
-      <h2>Sovereign cash-to-bitcoin processing.</h2>
+      <h2>Cash in. Bitcoin out.</h2>
     </div>
+    <div class="sub-label reveal">For users</div>
     <div class="how-steps">
-      <div class="step-card reveal"><div class="n">1</div><h3>Insert local currency</h3><p>The node validates and stores physical banknotes and coins via an enhanced multi-currency validation engine.</p></div>
-      <div class="step-card reveal"><div class="n">2</div><h3>Native routing</h3><p>Software paths the transaction via Lightning or On-Chain.</p></div>
-      <div class="step-card reveal"><div class="n">3</div><h3>Self-custodial settlement</h3><p>Funds clear directly into personal or corporate keys in real time.</p></div>
+      <div class="step-card reveal"><div class="n">1</div><h3>Insert local currency</h3><p>The terminal accepts local banknotes and coins through an enhanced multi-currency validation engine.</p></div>
+      <div class="step-card reveal"><div class="n">2</div><h3>Lightning or On-Chain</h3><p>Transactions are processed through either the Lightning Network or On-Chain settlement.</p></div>
+      <div class="step-card reveal"><div class="n">3</div><h3>Receive Bitcoin</h3><p>Funds are delivered directly to the user's wallet without custodial intermediary accounts.</p></div>
     </div>
 
     <div class="flow-diagram reveal">
@@ -314,8 +316,8 @@
       </div>
       <div class="flow-arrow"><svg fill="none" stroke-width="2" viewBox="0 0 46 24"><path d="M2 12h40M34 5l8 7-8 7"/></svg></div>
       <div class="flow-node kiosk">
-        <div class="chip"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><rect x="8" y="5" width="8" height="9" rx="1"/><path d="M9 18h6"/></svg>Node</div>
-        <div class="cap">K1 SAN</div>
+        <div class="chip"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><rect x="8" y="5" width="8" height="9" rx="1"/><path d="M9 18h6"/></svg>K1</div>
+        <div class="cap">Terminal</div>
       </div>
       <div class="flow-arrow"><svg fill="none" stroke-width="2" viewBox="0 0 46 24"><path d="M2 12h40M34 5l8 7-8 7"/></svg></div>
       <div class="flow-node digital">
@@ -324,21 +326,22 @@
       </div>
     </div>
 
+    <div class="sub-label reveal" style="margin-top:64px">For operators</div>
     <div class="optools reveal">
       <div class="optool">
         <div class="ic"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3h18v4H3zM3 10h18v4H3zM3 17h18v4H3zM7 5h.01M7 12h.01M7 19h.01"/></svg></div>
         <h4>Edge administration</h4>
-        <p>Manage, configure, and update your entire fleet's operational parameters instantly from your own administrative interface, with zero reliance on centralized manufacturer intervention.</p>
+        <p>Manage, configure, and update fleet-wide operational parameters from infrastructure you control.</p>
       </div>
       <div class="optool">
         <div class="ic"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
         <h4>Fee autonomy</h4>
-        <p>Set, adjust, and optimize custom commission percentages dynamically, with zero manufacturer revenue splits.</p>
+        <p>Set and optimize commissions dynamically with no manufacturer revenue splits.</p>
       </div>
       <div class="optool">
         <div class="ic"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M21 2v6h-6M3 12a9 9 0 0 1 15-6.7L21 8M3 22v-6h6M21 12a9 9 0 0 1-15 6.7L3 16"/></svg></div>
         <h4>Automated replenishment</h4>
-        <p>Configure the node to programmatically replenish its own backend BTC liquidity when execution conditions are favorable, reducing manual rebalancing overhead.</p>
+        <p>Configure automated liquidity replenishment based on predefined execution conditions, reducing manual rebalancing requirements.</p>
       </div>
     </div>
   </div>
@@ -350,13 +353,13 @@
     <div class="grid">
       <div class="reveal">
         <span class="sec-tag">Specifications</span>
-        <h2>Reinforced hardware, zero vendor lock-in.</h2>
-        <p class="lead">Engineered and assembled in Santa Tecla, El Salvador. A standardized global terminal optimized for sovereign localized distribution.</p>
+        <h2>A compact vault.</h2>
+        <p class="lead">Designed to adapt to your space. Built with reinforced steel for everyday cash handling.</p>
         <div class="spec-block stack">
           <div class="spec-grid">
             <div class="spec-row"><div class="rl">Hardware</div><div class="rv">Reinforced steel enclosure · 8&Prime; touchscreen · Integrated QR camera · WiFi connectivity · Universal AC input · Enhanced multi-currency bill and coin acceptor</div></div>
-            <div class="spec-row"><div class="rl">Software stack</div><div class="rv">Independent operating architecture · Native On-Chain &amp; Lightning routing · Conditional automated liquidity rebalancing engine · Integrated DCA schedule module</div></div>
-            <div class="spec-row"><div class="rl">Dimensions · micro footprint</div><div class="rv">34 &times; 28 &times; 19.5 cm. Designed for high-traffic counters, retail setups, and localized deployment.</div></div>
+            <div class="spec-row"><div class="rl">Software</div><div class="rv">Self-custodial operation · Lightning &amp; On-Chain settlement · Automated liquidity replenishment · Recurring Bitcoin purchases</div></div>
+            <div class="spec-row"><div class="rl">Dimensions</div><div class="rv">34 &times; 28 &times; 19.5 cm. Designed for high-traffic counters, retail setups, and localized deployment.</div></div>
             <div class="spec-row"><div class="rl">Capacity</div><div class="rv">Configured for the physical storage of up to ~300 banknotes and ~600 coins before requiring collection.</div></div>
           </div>
         </div>
@@ -384,13 +387,16 @@
   </div>
 </section>
 
-<!-- GLOBAL NETWORK -->
+<!-- GLOBAL PRESENCE -->
 <section class="network" id="network">
   <div class="wrap">
     <div class="net-head reveal">
       <span class="sec-tag">Global Presence</span>
-      <div class="net-stat"><span class="big">28</span><span class="big-lbl">countries, all continents</span></div>
-      <p style="font-size:17px;color:var(--slate)">Built on four years of field iterations, K1 hardware secures transactions across diverse global jurisdictions and localized currency environments.</p>
+      <div class="net-stat"><span class="big">28</span><span class="big-lbl">countries and counting</span></div>
+      <p style="font-size:17px;color:var(--slate)">Built on four years of field iterations, K1 hardware operates across diverse jurisdictions, currencies, and retail environments.</p>
+    </div>
+    <div class="map-wrap reveal">
+      <img src="map.png" alt="Map of K1 deployments across 28 countries on all continents" />
     </div>
     <div class="regions reveal">
       <div class="region">
@@ -410,7 +416,6 @@
         <div class="ct">United Arab Emirates · South Africa</div>
       </div>
     </div>
-    <p class="map-note">Deployment map available on request.</p>
   </div>
 </section>
 
@@ -420,13 +425,12 @@
     <div class="vf-card reveal">
       <div class="vf-copy">
         <span class="sec-tag">Interview</span>
-        <h3>In conversation with Mike Peterson.</h3>
-        <p>A conversation on building sovereign cash-to-Bitcoin infrastructure and the team deploying this hardware across markets.</p>
-        <span class="btn btn-primary" style="cursor:default;opacity:.85">Video coming soon</span>
+        <h3>To be defined.</h3>
+        <p>To be replaced.</p>
       </div>
       <div class="vf-thumb">
         <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="vf-tag">Mike Peterson interview · coming soon</div>
+        <div class="vf-tag">Coming soon</div>
       </div>
     </div>
   </div>
@@ -440,15 +444,15 @@
         <div class="demo-copy">
           <span class="sec-tag">Deploy</span>
           <h2>Create your Sovereign Access Node.</h2>
-          <p>Tell us about your network and the markets you serve. We will come back with how a K1 deployment fits, on your own infrastructure and your own terms.</p>
+          <p>Tell us where you're planning to deploy. We'll come back with how a K1 deployment fits your needs.</p>
         </div>
         <div class="demo-form">
           <form onsubmit="event.preventDefault();this.innerHTML='<p style=&quot;text-align:center;padding:30px 10px;font-size:16px;color:#13183a;font-weight:600&quot;>Thank you. We will be in touch.</p>';">
             <div class="field"><label>Name</label><input type="text" required></div>
-            <div class="field"><label>Organization</label><input type="text" required></div>
-            <div class="field"><label>Work email</label><input type="email" required></div>
-            <div class="field"><label>Network size / markets</label><textarea placeholder="Number of planned terminals and the markets you operate in."></textarea></div>
-            <button type="submit" class="btn btn-primary">Create your Sovereign Access Node</button>
+            <div class="field"><label>Email</label><input type="email" required></div>
+            <div class="field"><label>Country</label><input type="text" required></div>
+            <div class="field"><label>Organization <span style="color:var(--slate-light);font-weight:400">(optional)</span></label><input type="text"></div>
+            <button type="submit" class="btn btn-primary">Let's talk</button>
             <p class="form-note">Concept proposal. Destination to be configured.</p>
           </form>
         </div>
@@ -463,16 +467,16 @@
     <div class="foot-top">
       <div class="foot-brand">
         <div class="logo"><span class="k">K</span>1</div>
-        <p>Sovereign Access Nodes. Engineered and assembled in Santa Tecla, El Salvador.</p>
+        <p>Sovereign cash-to-Bitcoin infrastructure. Engineered and assembled in Santa Tecla, El Salvador.</p>
       </div>
       <div class="foot-nav">
         <a href="#overview">Overview</a>
         <a href="#architecture">Architecture</a>
         <a href="#specs">Specifications</a>
-        <a href="#network">Global Network</a>
+        <a href="#network">Global Presence</a>
       </div>
     </div>
-    <div class="foot-bottom">Production release &middot; proven across all continents &middot; 2026</div>
+    <div class="foot-bottom">2026</div>
   </div>
 </footer>
 
