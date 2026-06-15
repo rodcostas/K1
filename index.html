@@ -67,6 +67,7 @@
   .hero-stat .lbl{font-size:11px;color:var(--slate-light);font-weight:500;letter-spacing:.04em}
   .hs-1{top:-14px;right:-10px}
   .hs-2{bottom:-16px;left:-18px}
+  .hs-3{bottom:64px;right:-22px}
 
   /* SECTIONS */
   section{padding:96px 0}
@@ -233,7 +234,7 @@
     <div class="nav-right">
       <div class="nav-links">
         <a href="#overview">Overview</a>
-        <a href="#architecture">Architecture</a>
+        <a href="#architecture">User Experience</a>
         <a href="#specs">Specifications</a>
         <a href="#network">Global Presence</a>
         <a href="#contact" class="nav-cta">Deploy K1</a>
@@ -246,10 +247,10 @@
 <header class="hero">
   <div class="wrap hero-grid">
     <div class="reveal in">
-      <span class="eyebrow"><span class="dot"></span>Global footprint · Operating in 28 countries · Made in El Salvador</span>
+      <span class="eyebrow"><span class="dot"></span>Global footprint · Operating in 25+ countries · Made in El Salvador</span>
       <h1>Instant Bitcoin for users.<br><span class="grad-text">Sovereign control for operators.</span></h1>
-      <p class="lead">K1 is a compact cash-to-Bitcoin terminal that lets operators convert local cash directly into Bitcoin while retaining sovereign control over infrastructure, liquidity, margins, and operations.</p>
-      <p class="built-for">Built for Bitcoin Circular Economies, independent operators, enterprise wallet providers, and BTM networks seeking sovereign cash-to-Bitcoin infrastructure.</p>
+      <p class="lead">K1 is a compact terminal that lets operators convert local cash directly into Bitcoin at the spot rate, while retaining sovereign control over infrastructure, liquidity, margins, and operations.</p>
+      <p class="built-for">Built for Bitcoin Circular Economies, independent operators, and enterprise wallet providers seeking sovereign cash-to-Bitcoin infrastructure.</p>
     </div>
     <div class="hero-visual reveal in">
       <div class="device-card">
@@ -269,8 +270,9 @@
           <div class="billslot"></div>
         </div>
       </div>
-      <div class="hero-stat hs-1"><div class="num">28</div><div class="lbl">Countries</div></div>
+      <div class="hero-stat hs-1"><div class="num">25+</div><div class="lbl">Countries</div></div>
       <div class="hero-stat hs-2"><div class="num">100%</div><div class="lbl">Self-custodial</div></div>
+      <div class="hero-stat hs-3"><div class="num" id="btc-price">BTC</div><div class="lbl">Live price</div></div>
     </div>
   </div>
 </header>
@@ -284,10 +286,10 @@
         <h2>Platform independence.</h2>
         <p>Bring Bitcoin access closer to your users. The K1 software stack bridges the currency people use every day directly to your own keys and infrastructure.</p>
         <div class="applic">
-          <div class="a wide"><span class="tk"><svg fill="none" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>Process instant Lightning fractions for fast micro-transactions</div>
-          <div class="a wide"><span class="tk"><svg fill="none" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>Settle natively On-Chain for larger cash allocations</div>
-          <div class="a wide"><span class="tk"><svg fill="none" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>Support programmatic Dollar-Cost Averaging (DCA) schedules</div>
-          <div class="a wide"><span class="tk"><svg fill="none" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>Direct value into non-custodial environments without intermediary clearing</div>
+          <div class="a wide"><span class="tk"><svg fill="none" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>Process Lightning transactions for instant payments</div>
+          <div class="a wide"><span class="tk"><svg fill="none" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>Optionally settle On-Chain for transactions above 1000 sats</div>
+          <div class="a wide"><span class="tk"><svg fill="none" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>Optionally continue using third-party providers, keeping the option for convenience</div>
+          <div class="a wide"><span class="tk"><svg fill="none" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>Direct value into self-custodial environments without intermediary clearing</div>
         </div>
       </div>
       <div class="whatis-visual reveal"></div>
@@ -299,14 +301,14 @@
 <section id="architecture">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-tag">Architecture</span>
+      <span class="sec-tag">User Experience</span>
       <h2>Cash in. Bitcoin out.</h2>
     </div>
     <div class="sub-label reveal">For users</div>
     <div class="how-steps">
-      <div class="step-card reveal"><div class="n">1</div><h3>Insert local currency</h3><p>The terminal accepts local banknotes and coins through an enhanced multi-currency validation engine.</p></div>
-      <div class="step-card reveal"><div class="n">2</div><h3>Lightning or On-Chain</h3><p>Transactions are processed through either the Lightning Network or On-Chain settlement.</p></div>
-      <div class="step-card reveal"><div class="n">3</div><h3>Receive Bitcoin</h3><p>Funds are delivered directly to the user's wallet without custodial intermediary accounts.</p></div>
+      <div class="step-card reveal"><div class="n">1</div><h3>Insert local currency</h3><p>The unit accepts local banknotes and coins through industry standard validation components.</p></div>
+      <div class="step-card reveal"><div class="n">2</div><h3>Lightning or On-Chain</h3><p>Transactions are processed either through the Lightning Network or the Bitcoin blockchain.</p></div>
+      <div class="step-card reveal"><div class="n">3</div><h3>Receive Bitcoin</h3><p>Funds are delivered directly to the user's wallet without intermediaries.</p></div>
     </div>
     
     <div class="sub-label reveal" style="margin-top:64px">For operators</div>
@@ -324,7 +326,7 @@
       <div class="optool">
         <div class="ic"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M21 2v6h-6M3 12a9 9 0 0 1 15-6.7L21 8M3 22v-6h6M21 12a9 9 0 0 1-15 6.7L3 16"/></svg></div>
         <h4>Automated replenishment</h4>
-        <p>Configure automated liquidity replenishment based on predefined execution conditions, reducing manual rebalancing requirements.</p>
+        <p>Set custom rules to automatically top up Bitcoin liquidity and eliminate manual refills.</p>
       </div>
     </div>
   </div>
@@ -337,12 +339,12 @@
       <div class="reveal">
         <span class="sec-tag">Specifications</span>
         <h2>A compact vault.</h2>
-        <p class="lead">Designed to adapt to your space. Built with reinforced steel for everyday cash handling.</p>
+        <p class="lead">Designed to fit your space. Built with reinforced steel for everyday cash handling.</p>
         <div class="spec-block stack">
           <div class="spec-grid">
             <div class="spec-row"><div class="rl">Hardware</div><div class="rv">Reinforced steel enclosure · 8&Prime; touchscreen · Integrated QR camera · WiFi connectivity · Universal AC input · Enhanced multi-currency bill and coin acceptor</div></div>
-            <div class="spec-row"><div class="rl">Software</div><div class="rv">Self-custodial operation · Lightning &amp; On-Chain settlement · Automated liquidity replenishment · Recurring Bitcoin purchases</div></div>
-            <div class="spec-row"><div class="rl">Dimensions</div><div class="rv">34 &times; 28 &times; 19.5 cm. Designed for high-traffic counters, retail setups, and localized deployment.</div></div>
+            <div class="spec-row"><div class="rl">Software</div><div class="rv">Self-custodial operation · Lightning &amp; On-Chain settlement · Top up Bitcoin liquidity automatically · Bitcoin price on spot · Operator-set fee, transparent to the user</div></div>
+            <div class="spec-row"><div class="rl">Dimensions</div><div class="rv">34 &times; 28 &times; 20 cm. Designed for high-traffic counters, retail setups, and localized deployment in supervised locations.</div></div>
             <div class="spec-row"><div class="rl">Capacity</div><div class="rv">Configured for the physical storage of up to ~300 banknotes and ~600 coins before requiring collection.</div></div>
           </div>
         </div>
@@ -375,11 +377,11 @@
   <div class="wrap">
     <div class="net-head reveal">
       <span class="sec-tag">Global Presence</span>
-      <div class="net-stat"><span class="big">28</span><span class="big-lbl">countries and counting</span></div>
+      <div class="net-stat"><span class="big">25+</span><span class="big-lbl">countries and counting</span></div>
       <p style="font-size:17px;color:var(--slate)">Built on four years of field iterations, K1 hardware operates across diverse jurisdictions, currencies, and retail environments.</p>
     </div>
     <div class="map-wrap reveal">
-      <img src="map.png" alt="Map of K1 deployments across 28 countries on all continents" />
+      <img src="map.png" alt="Map of K1 deployments across 25+ countries on all continents" />
     </div>
     <div class="regions reveal">
       <div class="region">
@@ -426,15 +428,15 @@
       <div class="demo-grid">
         <div class="demo-copy">
           <span class="sec-tag">Deploy</span>
-          <h2>Create your Sovereign Access Node.</h2>
+          <h2>Become a Sovereign Access Node.</h2>
           <p>Tell us where you're planning to deploy. We'll come back with how a K1 deployment fits your needs.</p>
         </div>
         <div class="demo-form">
-          <form onsubmit="event.preventDefault();this.innerHTML='<p style=&quot;text-align:center;padding:30px 10px;font-size:16px;color:#13183a;font-weight:600&quot;>Thank you. We will be in touch.</p>';">
-            <div class="field"><label>Name</label><input type="text" required></div>
-            <div class="field"><label>Email</label><input type="email" required></div>
-            <div class="field"><label>Country</label><input type="text" required></div>
-            <div class="field"><label>Organization <span style="color:var(--slate-light);font-weight:400">(optional)</span></label><input type="text"></div>
+          <form onsubmit="event.preventDefault();var n=this.querySelector('[name=name]').value,e=this.querySelector('[name=email]').value,c=this.querySelector('[name=country]').value,m=this.querySelector('[name=message]').value;var body=encodeURIComponent('Name: '+n+'\nEmail: '+e+'\nCountry: '+c+'\n\n'+m);window.location.href='mailto:info@k1.sv?subject='+encodeURIComponent('K1 deployment enquiry')+'&body='+body;this.innerHTML='<p style=&quot;text-align:center;padding:30px 10px;font-size:16px;color:#13183a;font-weight:600&quot;>Thank you. We will be in touch.</p>';">
+            <div class="field"><label>Name</label><input type="text" name="name" required></div>
+            <div class="field"><label>Email</label><input type="email" name="email" required></div>
+            <div class="field"><label>Country</label><input type="text" name="country" required></div>
+            <div class="field"><label>Your Message</label><textarea name="message" rows="3"></textarea></div>
             <button type="submit" class="btn btn-primary">Let's talk</button>
             <p class="form-note">Concept proposal. Destination to be configured.</p>
           </form>
@@ -454,7 +456,7 @@
       </div>
       <div class="foot-nav">
         <a href="#overview">Overview</a>
-        <a href="#architecture">Architecture</a>
+        <a href="#architecture">User Experience</a>
         <a href="#specs">Specifications</a>
         <a href="#network">Global Presence</a>
       </div>
@@ -463,6 +465,21 @@
   </div>
 </footer>
 
+<script>
+  (function(){
+    const el = document.getElementById('btc-price');
+    if(!el) return;
+    function fmt(n){ return '$' + Math.round(n).toLocaleString('en-US'); }
+    function load(){
+      fetch('https://api.coinbase.com/v2/prices/BTC-USD/spot')
+        .then(r=>r.json())
+        .then(d=>{ if(d&&d.data&&d.data.amount){ el.style.fontSize='18px'; el.textContent = fmt(parseFloat(d.data.amount)); } })
+        .catch(()=>{});
+    }
+    load();
+    setInterval(load, 60000);
+  })();
+</script>
 <script>
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
